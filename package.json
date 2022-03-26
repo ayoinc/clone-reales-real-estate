@@ -26,7 +26,8 @@
     "redux": "^3.7.2",
     "redux-persist": "^4.10.1",
     "redux-promise-middleware": "^4.4.1",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/redux-logger": "^3.0.4",
@@ -39,6 +40,9 @@
     "start": "cp src/index.main.tsx src/index.tsx && react-scripts-ts start",
     "build": "cp src/index.main.tsx src/index.tsx && react-scripts-ts build",
     "start-admin": "cp src/index.admin.tsx src/index.tsx && react-scripts-ts start",
-    "build-admin": "cp src/index.admin.tsx src/index.tsx && react-scripts-ts build"
-  }
+    "build-admin": "cp src/index.admin.tsx src/index.tsx && react-scripts-ts build",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
