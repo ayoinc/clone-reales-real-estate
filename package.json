@@ -16,17 +16,18 @@
     "@types/redux-persist": "^4.3.1",
     "@types/redux-promise-middleware": "0.0.8",
     "@types/redux-thunk": "^2.1.0",
-    "axios": "^0.16.2",
-    "google-map-react": "^0.24.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.6.1",
+    "axios": "^0.21.3",
+    "google-map-react": "^1.0.0",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
     "react-fa": "^5.0.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.1.1",
     "redux": "^3.7.2",
     "redux-persist": "^4.10.1",
     "redux-promise-middleware": "^4.4.1",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/redux-logger": "^3.0.4",
@@ -39,6 +40,9 @@
     "start": "cp src/index.main.tsx src/index.tsx && react-scripts-ts start",
     "build": "cp src/index.main.tsx src/index.tsx && react-scripts-ts build",
     "start-admin": "cp src/index.admin.tsx src/index.tsx && react-scripts-ts start",
-    "build-admin": "cp src/index.admin.tsx src/index.tsx && react-scripts-ts build"
-  }
+    "build-admin": "cp src/index.admin.tsx src/index.tsx && react-scripts-ts build",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
